@@ -1,5 +1,5 @@
 # Pfad zum Ablegen der LogDateien            
-$LogPfad = "C:\Users\Praktikant\Desktop\test.txt"            
+$LogPfad = "$Home\Desktop\speedtest"            
             
 # Datum generieren. Mit diesem Beispiel wird pro Tag eine Logdatei erstellt            
 $Datum = get-date -Format "dd.MM.yyyy"            
@@ -41,7 +41,7 @@ function write-LogRecord
             )            
                     
         # Generieren des Zeitstempels für die einzelnen LogZeilen            
-        $TimeStamp = get-date -Format "[dd.MM.yyyy HH:mm:ss]"            
+        $TimeStamp = get-date -Format "[dd.MM.yyyy ; HH:mm:ss]"            
                     
         # Inhalt entsprechend Formatieren und zusammensetzen            
         $LogInhalt = "{0,-25}{1,-12}{2}" -f $TimeStamp,$Typ,$Text            
